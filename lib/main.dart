@@ -20,8 +20,8 @@ class _MyApp extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: BlocProvider<PostsCubit>(
-        create: (_) => PostsCubit()..getPosts(),
+      home: BlocProvider<PostsBloc>(
+        create: (_) => PostsBloc()..add(LoadPostsEvent()),
         child: PostsView(),
       )
     );
