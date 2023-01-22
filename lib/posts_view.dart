@@ -9,11 +9,11 @@ class PostsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Posts'),
+        title: const Text('Posts'),
       ),
       body: BlocBuilder<PostsCubit, List<Post>>(builder: (context, postsList) {
           if (postsList.isEmpty) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           }
